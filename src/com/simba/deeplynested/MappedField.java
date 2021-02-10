@@ -18,4 +18,13 @@ public class MappedField {
     public String getName() {
         return name;
     }
+
+    public boolean hasName(String storedName) {
+        for (final String n: getLoadNames()) {
+            if (storedName.equals(n)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
